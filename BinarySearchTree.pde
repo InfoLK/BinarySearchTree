@@ -1,6 +1,7 @@
 BinaryTree testbaum;
 
 void setup() {
+  // Hide Processing window
   surface.setVisible(false); 
   
   testbaum = generateMockTree();
@@ -8,6 +9,7 @@ void setup() {
   println("Node Count: " + testbaum.getNodeCount());
   println("Depth: " + testbaum.getDepth());
   
+  // Stop process
   exit();
 }
 
