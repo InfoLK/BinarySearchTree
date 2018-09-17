@@ -76,9 +76,16 @@ class BinaryTree
   }
   
   public int getDepth() {
-    if(this.isLeaf())
+    if (this.isLeaf())
       return 1;
-    if(this.getLeftTree().getDepth() > this.getRightTree().getDepth())
+    
+    if (this.getLeftTree() == null)
+      return this.getRightTree().getDepth() + 1;
+    
+    if (this.getRightTree() == null)
+      return this.getLeftTree().getDepth() + 1;
+    
+    if (this.getLeftTree().getDepth() > this.getRightTree().getDepth())
       return this.getLeftTree().getDepth() + 1;
     else
       return this.getRightTree().getDepth() + 1;
