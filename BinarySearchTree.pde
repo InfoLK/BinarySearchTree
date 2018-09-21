@@ -2,7 +2,10 @@ BinaryTree testbaum;
 
 void setup() {
   // Hide Processing window
-  surface.setVisible(false); 
+  surface.setVisible(false);
+  
+  // No loop required for testing
+  noLoop();
   
   testbaum = generateMockTree();
   
